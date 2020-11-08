@@ -12,141 +12,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d2e8d9c-8a04-4509-a5c1-749765d88617" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssignmentAPI.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Controllers/FamilyController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Controllers/UserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Data/FamilyService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Data/FileContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Data/IFamilyService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Data/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Data/Impl/CustomAuthenticationStateProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Data/Impl/InMemoryUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/FamilyAPI.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Models/Adult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Models/Child.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Models/ChildInterest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Models/Family.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Models/Interest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Models/Person.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Models/Pet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Models/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyAPI/families.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/App.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Data/FamilyServiceClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Data/IFamilyService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Data/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Data/Impl/CustomAuthenticationStateProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Data/Impl/InMemoryUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/FamilyInfo.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Models/Adult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Models/Child.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Models/ChildInterest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Models/Family.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Models/Interest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Models/Person.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Models/Pet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Models/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/AddAdult.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/AddChild.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/AddFamily.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/AddPet.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/Adults.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/Children.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/Error.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/Families.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/FamilyPets.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/Index.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/Logout.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/Security.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/SeeFamily.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Pages/_Host.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Shared/MainLayout.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Shared/NavMenu.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Shared/SurveyPrompt.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/_Imports.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/families.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/bootstrap/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/bootstrap/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/open-iconic/FONT-LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/open-iconic/ICON-LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/open-iconic/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/open-iconic/font/fonts/open-iconic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/open-iconic/font/fonts/open-iconic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/open-iconic/font/fonts/open-iconic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/open-iconic/font/fonts/open-iconic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/css/site.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInfo/wwwroot/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/App.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Data/FamilyServiceClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Data/IFamilyService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Data/IUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Data/Impl/CustomAuthenticationStateProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Data/Impl/InMemoryUserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/FamilyInformation.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Models/Adult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Models/Child.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Models/ChildInterest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Models/Family.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Models/Interest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Models/Person.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Models/Pet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Models/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/AddAdult.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/AddChild.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/AddFamily.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/AddPet.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/Adults.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/Children.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/Counter.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/Error.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/Families.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/FamilyPets.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/Index.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/Logout.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/Security.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/SeeFamily.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Pages/_Host.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Persistence/FileContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Shared/MainLayout.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Shared/NavMenu.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Shared/SurveyPrompt.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/_Imports.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/adults.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/families.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/bootstrap/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/bootstrap/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/open-iconic/FONT-LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/open-iconic/ICON-LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/open-iconic/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/open-iconic/font/fonts/open-iconic.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/open-iconic/font/fonts/open-iconic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/open-iconic/font/fonts/open-iconic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/open-iconic/font/fonts/open-iconic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/css/site.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FamilyInformation/wwwroot/favicon.ico" afterDir="false" />
-    </list>
+    <list default="true" id="9d2e8d9c-8a04-4509-a5c1-749765d88617" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -186,7 +52,6 @@
         <option value="$PROJECT_DIR$/FamilyInfo/Models/Interest.cs" />
         <option value="$PROJECT_DIR$/FamilyInfo/Models/Person.cs" />
         <option value="$PROJECT_DIR$/FamilyInfo/Models/Pet.cs" />
-        <option value="$PROJECT_DIR$/FamilyInfo/Models/User.cs" />
         <option value="$PROJECT_DIR$/FamilyInfo/Data/IFamilyService.cs" />
         <option value="$PROJECT_DIR$/FamilyInfo/Startup.cs" />
         <option value="$PROJECT_DIR$/FamilyInfo/Pages/_Host.cshtml" />
@@ -217,8 +82,9 @@
         <option value="$PROJECT_DIR$/FamilyAPI/Data/Impl/InMemoryUserService.cs" />
         <option value="$PROJECT_DIR$/FamilyAPI/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/FamilyInfo/Data/IUserService.cs" />
-        <option value="$PROJECT_DIR$/FamilyInfo/Data/Impl/InMemoryUserService.cs" />
         <option value="$PROJECT_DIR$/FamilyInfo/Data/Impl/CustomAuthenticationStateProvider.cs" />
+        <option value="$PROJECT_DIR$/FamilyInfo/Data/Impl/InMemoryUserService.cs" />
+        <option value="$PROJECT_DIR$/FamilyInfo/Models/User.cs" />
       </list>
     </option>
   </component>
@@ -234,6 +100,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.FamilyInfo">
@@ -300,7 +167,7 @@
       <workItem from="1604766864375" duration="459000" />
       <workItem from="1604767349936" duration="1635000" />
       <workItem from="1604779781200" duration="1830000" />
-      <workItem from="1604849828772" duration="9407000" />
+      <workItem from="1604849828772" duration="9859000" />
     </task>
     <servers />
   </component>
@@ -330,22 +197,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="447" y="0" width="1089" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1604858171755" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1604861868757">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1604867033959">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604861868757" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1604861868757">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604867033959" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1604867033958">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604861868757" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1604861868757">
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604867033958" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1604867033958">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604861868757" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1604861868757">
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604867033958" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1604867033959">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604861868757" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604867033959" />
     <state x="722" y="152" key="Rider.ProjectTemplateDialog.Size" timestamp="1604779813959">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

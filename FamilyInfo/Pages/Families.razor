@@ -1,0 +1,123 @@
+﻿@page "/Families"
+@using FamilyInfo.Data
+@using FamilyInfo.Models
+
+@inject IFamilyService FamilyService
+@inject NavigationManager NavigationManager
+
+<h3>Families</h3>
+@if (!authenticated)
+{
+    <p>To access information please Log in</p>
+    <a href="" @onclick="Login">Login</a>
+}
+
+    <AuthorizeView Context="Auth" Policy="LoggedIn">
+        <p>
+            Filter by Street name: <input type="text" @oninput="@((arg) => Filter(arg))" style="width: 100px"/>
+        </p>
+        @if (familiesToShow == null)
+        {
+            <p>
+                <em>Loading...</em>
+            </p>
+        }
+        else if (!familiesToShow.Any())
+        {
+            <p>
+                <em>No Families are added. Please add some.</em>
+            </p>
+        }
+        else
+        {
+            <table class="table">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Family</th>
+                    <th>Street Name</th>
+                    <th>House Number</th>
+                    <th>Adults</th>
+                    <th>Children</th>
+                    <th>Pets</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in familiesToShow)
+                {
+                    <tr>
+                        <td>
+                            <AuthorizeView Policy="Admin">
+                                <button @onclick="@(() => RemoveFamilyAsync(item.HouseNumber, item.StreetName))">
+                                    <i class="oi oi-trash" style="color:red"/>
+                                </button>
+                            </AuthorizeView>
+                        </td>
+                        <td>
+                            <a href="" @onclick="@(() => ThisFamily(item))" style="color:black">@item.Adults[0].LastName Family</a>
+                        </td>
+                        <td>@item.StreetName</td>
+                        <td>@item.HouseNumber</td>
+                        <td>@item.Adults.Count</td>
+                        <td>@item.Children.Count</td>
+                        <td>@item.Pets.Count</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+    </AuthorizeView>
+
+@code {
+    private IList<Family> allFamilies;
+    private IList<Family> familiesToShow;
+    private bool authenticated;
+    private bool admin;
+    private string filterByStreet;
+
+    [CascadingParameter]
+    protected Task<AuthenticationState> AuthStat { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var user = (await AuthStat).User;
+        authenticated = user.Identity.IsAuthenticated;
+
+        allFamilies = await FamilyService.GetFamiliesAsync();
+        familiesToShow = allFamilies;
+    }
+
+
+    private void ThisFamily(Family family)
+    {
+        FamilyService.Family = family;
+        NavigationManager.NavigateTo("/SeeFamily");
+    }
+
+    private async Task RemoveFamilyAsync(int HouseNumber, string StreetName)
+    {
+        Family familyToRemove = allFamilies.First(a => a.HouseNumber == HouseNumber && a.StreetName.Equals(StreetName));
+        await FamilyService.RemoveFamilyAsync(HouseNumber, StreetName);
+        allFamilies.Remove(familyToRemove);
+    }
+
+    private void Filter(ChangeEventArgs changeEventArgs)
+    {
+        filterByStreet = null;
+        try
+        {
+            filterByStreet = changeEventArgs.Value.ToString();
+        }
+        catch (Exception e)
+        {
+        }
+
+        familiesToShow = allFamilies.Where(a =>filterByStreet!=null&& a.StreetName.Contains(filterByStreet)||filterByStreet==null||filterByStreet.Equals("")).ToList();
+    }
+
+    private void Login()
+    {
+        NavigationManager.NavigateTo("/Security");
+    }
+
+}

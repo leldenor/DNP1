@@ -1,0 +1,79 @@
+﻿
+@using FamilyInformation.Data
+@using FamilyInformation.Models
+@inject IFamilyService FamilyService
+@inject NavigationManager NavigationManager
+
+<h3>
+    Family Pets
+    <AuthorizeView Policy="Adult">
+        <button @onclick="AddPet">
+            <i class="oi oi-plus" style="color:red"/>
+        </button>
+    </AuthorizeView>
+</h3>
+
+@if (petsToShow == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else if (!petsToShow.Any())
+{
+    <p>
+        <em>Family does not own any pets.</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Species</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in petsToShow)
+        {
+            <tr>
+                <td>
+                    <AuthorizeView Policy="Adult">
+                        <button @onclick="@(() => RemovePetAsync(item.Id))">
+                            <i class="oi oi-trash" style="color:red"/>
+                        </button>
+                    </AuthorizeView>
+                </td>
+                <td>@item.Species</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IList<Pet> petsToShow;
+
+    protected override async Task OnInitializedAsync()
+    {
+        petsToShow = FamilyService.Family.Pets;
+    }
+
+    private async Task RemovePetAsync(int petId)
+    {
+        Pet petToRemove = petsToShow.First(a => a.Id == petId);
+        await FamilyService.RemovePetAsync(petId);
+        petsToShow.Remove(petToRemove);
+    }
+
+    private void AddPet()
+    {
+        NavigationManager.NavigateTo("/AddPet");
+    }
+
+}

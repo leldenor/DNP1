@@ -1,0 +1,42 @@
+﻿@page "/AddPet"
+@using FamilyInformation.Data
+@using FamilyInformation.Models
+@inject IFamilyService FamilyService
+@inject NavigationManager NavigationManager
+<h3>Add Pet</h3>
+<EditForm Model="@newPetItem" OnValidSubmit="@AddNewPetItemAsync">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="form-group">
+        Species:<br/>
+        <InputTextArea rows="1" @bind-Value="newPetItem.Species"/>
+    </div>
+    <div class="form-group">
+        Name:<br/>
+        <InputTextArea rows="1" @bind-Value="newPetItem.Name"/>
+    </div>
+    <div class="form-group">
+        Age:<br/>
+        <InputNumber rows="1" @bind-Value="newPetItem.Age"/>
+    </div>
+    <p class="actions">
+        <button class="btn btn-outline-dark" type="submit">Add</button>
+        <button class="btn btn-outline-dark" type="button" @onclick="Families">Cancel</button>
+    </p>
+</EditForm>
+
+@code {
+    private Pet newPetItem = new Pet();
+
+    private async Task AddNewPetItemAsync()
+    {
+        await FamilyService.AddPetAsync(newPetItem);
+        NavigationManager.NavigateTo("/SeeFamily");
+    }
+
+    private void Families()
+    {
+        NavigationManager.NavigateTo("/SeeFamily");
+    }
+
+}

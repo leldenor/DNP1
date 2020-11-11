@@ -46,7 +46,7 @@ namespace FamilyInfo.Data
         public Family Family { get; set; }
         public async Task RemoveFamilyAsync(int HouseNumber, string StreetName)
         {
-            await client.DeleteAsync($"http://dnp.metamate.me/Families/{HouseNumber}&{StreetName}");
+            await client.DeleteAsync($"http://dnp.metamate.me/Families?{HouseNumber}&{StreetName}");
         }
 
         public async Task AddFamilyAsync(Family family)

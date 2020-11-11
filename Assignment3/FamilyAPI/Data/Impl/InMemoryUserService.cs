@@ -38,7 +38,7 @@ namespace FamilyAPI.Data.Impl
             }.ToList();
         }
 
-        public User ValidateUser(string userName, string password)
+        public async Task<User> ValidateUser(string userName, string password)
         {
             User first = Users.FirstOrDefault(user => user.UserName.Equals(userName));
             if (first == null)
@@ -53,11 +53,6 @@ namespace FamilyAPI.Data.Impl
 
             return first;
         }
-
-        public async Task<IList<User>> GetUsers()
-        {
-            IList<User> users=new List<User>(Users);
-            return users;
-        }
+        
     }
 }

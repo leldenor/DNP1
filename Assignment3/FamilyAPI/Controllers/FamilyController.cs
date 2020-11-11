@@ -19,7 +19,7 @@ namespace FamilyAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IList<Family>>> GetFamily()
+        public async Task<ActionResult<IList<Family>>> GetFamilies()
         {
             try
             {
@@ -55,7 +55,7 @@ namespace FamilyAPI.Controllers
 
         [HttpDelete]
         [Route("{streetName}&{houseNumber:int}")]
-        public async Task<ActionResult> DeleteFamily([FromBody] string streetName, int houseNumber)
+        public async Task<ActionResult> DeleteFamily([FromQuery] string streetName, [FromQuery]int houseNumber)
         {
             try
             {

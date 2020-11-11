@@ -6,7 +6,6 @@ namespace FamilyAPI.Data
 {
     public interface IUserService
     {
-        User ValidateUser(string userName, string password);
-        Task<IList<User>> GetUsers();
+        Task<User> ValidateUser(string userName, string password);
     }
 }

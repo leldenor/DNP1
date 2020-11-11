@@ -45,32 +45,13 @@ public class FileContext :IFamilyService {
             outputFile.Write(jsonAdults);
         }
     }
-
-    public void AddAdult(Adult adult)
-    {
-        IList<Adult> adults= Families.SelectMany(item => item.Adults).ToList();
-        int max = adults.Max(adult => adult.Id);
-        adult.Id = (++max);
-        Family.Adults.Add(adult);
-        SaveChanges();
-    }
     
-
-    public void RemoveAdult(int personId)
-    {
-        Adult toRemove = Family.Adults.First(a => a.Id == personId);
-        Family.Adults.Remove(toRemove);
-        SaveChanges();
-    }
-
     public async Task<IList<Family>> GetFamilies()
     {
         List<Family> tmp=new List<Family>(Families);
         return tmp;
     }
     
-
-    public Family Family { get; set; }
     public async Task RemoveFamily(int HouseNumber, string StreetName)
     {
         Family toRemove = Families.First(a => a.HouseNumber ==HouseNumber&&a.StreetName.Equals(StreetName));
@@ -97,48 +78,5 @@ public class FileContext :IFamilyService {
         SaveChanges();
         
     }
-
-    public void RemoveChild(int childId)
-    {
-        Child toRemove = Family.Children.First(a => a.Id == childId);
-        Family.Children.Remove(toRemove);
-        SaveChanges();
-    }
-
-    public void RemoveChildPet(int petId)
-    {
-
-    }
-
-    public void RemovePet(int petId)
-    {
-        Pet toRemove = Family.Pets.First(a => a.Id == petId);
-        Family.Pets.Remove(toRemove);
-        SaveChanges();
-    }
-
-    public void AddChild(Child child)
-    {
-        IList<Child> children= Families.SelectMany(item => item.Children).ToList();
-        int max = children.Max(child => child.Id);
-        child.Id = (++max);
-        Family.Children.Add(child);
-        SaveChanges();
-    }
-
-    public void AddPet(Pet pet)
-    {
-        IList<Pet> pets= Families.SelectMany(item => item.Pets).ToList();
-        foreach (var item in Families.SelectMany(item => item.Children.SelectMany(t => t.Pets)).ToList())
-        {
-            pets.Add(item);
-        }
-        
-        int max = pets.Max(petId => petId.Id);
-        pet.Id = (++max);
-        Family.Pets.Add(pet);
-        SaveChanges();
-    }
-    
 }
 }

@@ -18,12 +18,12 @@ namespace FamilyAPI.Controllers
             UserService = userService;
         }
         [HttpGet]
-        public async Task<ActionResult<IList<User>>> GetUsers()
+        public async Task<ActionResult<User>> GetUser([FromQuery] string userName, [FromQuery] string password)
         {
             try
             {
-                IList<User> users = await UserService.GetUsers();
-                return Ok(users);
+                User user = await UserService.ValidateUser(userName, password);
+                return Ok(user);
             }
             catch (Exception e)
             {

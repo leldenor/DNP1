@@ -22,7 +22,7 @@ namespace FamilyInfo.Data
         public async Task AddAdultAsync(Adult adult)
         {
             IList<Adult> adults= Families.SelectMany(item => item.Adults).ToList();
-            int max = adults.Max(adult => adult.Id);
+            int max = adults.Max(a => a.Id);
             adult.Id = (++max);
             Family.Adults.Add(adult);
             await UpdateFamily(Family);
@@ -46,7 +46,7 @@ namespace FamilyInfo.Data
         public Family Family { get; set; }
         public async Task RemoveFamilyAsync(int HouseNumber, string StreetName)
         {
-            await client.DeleteAsync($"http://localhost:5004/Family/{HouseNumber}&{StreetName}");
+            await client.DeleteAsync($"http://localhost:5004/Family?streetName={StreetName}&houseNumber{HouseNumber}");
         }
 
         public async Task AddFamilyAsync(Family family)

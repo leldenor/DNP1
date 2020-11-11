@@ -105,11 +105,9 @@
             <e p="UserController.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
-            <e p="FamilyService.cs" t="Include" />
             <e p="FileContext.cs" t="Include" />
             <e p="IFamilyService.cs" t="Include" />
             <e p="Impl" t="Include">
-              <e p="CustomAuthenticationStateProvider.cs" t="Include" />
               <e p="InMemoryUserService.cs" t="Include" />
             </e>
             <e p="IUserService.cs" t="Include" />

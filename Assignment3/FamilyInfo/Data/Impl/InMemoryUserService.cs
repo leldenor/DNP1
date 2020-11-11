@@ -10,7 +10,6 @@ namespace FamilyInfo.Data.Impl
 {
     public class InMemoryUserService : IUserService
     {
-        private IList<User> Users;
         private readonly HttpClient client;
 
         public InMemoryUserService()
@@ -19,21 +18,10 @@ namespace FamilyInfo.Data.Impl
         }
         public async Task<User> ValidateUser(string userName, string password)
         {
-            string message = await client.GetStringAsync("http://localhost:5004/User");
-            IList<User> result = JsonSerializer.Deserialize<List<User>>(message);
-            Users = result;
-            User first = Users.FirstOrDefault(user => user.UserName.Equals(userName));
-            if (first == null)
-            {
-                throw new Exception("User not found");
-            }
+            string message = await client.GetStringAsync($"http://localhost:5004/User?username={userName}&password={password}");
+            User result = JsonSerializer.Deserialize<User>(message);
 
-            if (!first.Password.Equals(password))
-            {
-                throw new Exception("Incorrect password");
-            }
-
-            return first;
+            return result;
         }
     }
 }

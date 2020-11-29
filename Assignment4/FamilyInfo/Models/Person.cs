@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace FamilyInfo.Models {
 public class Person {
-    [JsonPropertyName("ID")]
+    [JsonPropertyName("Id")]
     public int Id { get; set; }
     [NotNull]
     [JsonPropertyName("FirstName")]

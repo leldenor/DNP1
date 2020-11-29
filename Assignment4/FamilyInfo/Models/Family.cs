@@ -4,8 +4,8 @@ using System.Text.Json.Serialization;
 
 namespace FamilyInfo.Models {
 public class Family {
-    [JsonPropertyName("ID")]
-    public int Id { get; set; }
+    //[JsonPropertyName("ID")]
+    //public int Id { get; set; }
     [Required]
     [JsonPropertyName("StreetName")]
     public string StreetName { get; set; }

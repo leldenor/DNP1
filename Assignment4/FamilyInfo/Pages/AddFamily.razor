@@ -99,10 +99,6 @@ else
 
     private async Task AddNewAdultAsync()
     {
-        IList<Family> families = await FamilyService.GetFamiliesAsync();
-        IList<Adult> adults = families.SelectMany(item => item.Adults).ToList();
-        int max = adults.Max(adult => adult.Id);
-        newAdultItem.Id = (++max);
         newFamilyItem.Adults.Add(newAdultItem);
         added = true;
     }

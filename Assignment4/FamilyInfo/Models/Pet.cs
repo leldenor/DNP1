@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace FamilyInfo.Models {
 public class Pet {
-    [JsonPropertyName("ID")]
+    [JsonPropertyName("Id")]
     public int Id { get; set; }
     [Required]
     [JsonPropertyName("Species")]

@@ -1,0 +1,32 @@
+﻿@using LoginComponent
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
+<div class="sidebar">
+    <NavMenu/>
+</div>
+
+<div class="main">
+    <div class="top-row px-4">
+        <AuthorizeView>
+                    <NotAuthorized>
+                        <a href="" @onclick="LoginPage"> Login </a>
+                    </NotAuthorized>
+                    <Authorized>
+                        <Logout/>
+                    </Authorized>
+                </AuthorizeView>
+    </div>
+
+    <div class="content px-4">
+        @Body
+    </div>
+</div>
+
+@code{
+    private void LoginPage()
+    {
+        NavigationManager.NavigateTo("/Security");
+    }
+}
+
